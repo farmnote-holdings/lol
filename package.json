@@ -4,6 +4,10 @@
   "description": "generates pairs for 1on1",
   "author": "Farmnote OSS team <oss@farmnote.jp>",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/farmnote-holdings/lol"
+  },
   "bin": "./src/cli/lol",
   "scripts": {
     "build": "tsc",
