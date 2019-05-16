@@ -7,9 +7,9 @@ generates pairs for 1on1
 ### Installing
 
 ```console
-yarn global add @farmnote-holdings/lol
+yarn global add @farmnote/lol
 # or
-npm install --global @farmnote-holdings/lol
+npm install --global @farmnote/lol
 ```
 
 ### Generating 1on1 Pairs
