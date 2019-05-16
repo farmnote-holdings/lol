@@ -1,0 +1,37 @@
+#!/usr/bin/env node
+
+const program = require('commander')
+const fs = require('fs')
+const generate = require('../../dist/generate').default
+
+const PERIOD = 2 * 7 * 24 * 60 * 60 * 1000
+
+const now = new Date()
+const DEFAULTS = {
+  ITERATIONS: 5,
+  MAX_TRIALS: 100,
+}
+
+program
+  .option('-h, --histories-path [historiesPath]', 'path for histories')
+  .option('-i, --iterations [iterations]', 'number of iteration', DEFAULTS.ITERATIONS)
+  .option('-m, --max-trials [maxTrials]', 'max trials', DEFAULTS.MAX_TRIALS)
+  .arguments('[membersAttrsPath]')
+  .action((membersAttrsPath, options) => {
+    options.membersAttrsPath = membersAttrsPath
+    options.callback = (count, minScore) => {
+      process.stderr.write(`\rtrial #${count}/${options.maxTrials} now found: ${minScore}`)
+    }
+    try {
+      const allPairs = generate(options)
+      process.stderr.write("\n")
+      process.stdout.write(JSON.stringify(allPairs))
+    }
+    catch(e) {
+      process.stderr.write(`${e.message}\n`)
+    }
+    finally {
+      process.stderr.write("\n")
+    }
+  })
+  .parse(process.argv)

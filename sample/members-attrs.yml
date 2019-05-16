@@ -1,0 +1,78 @@
+---
+宮崎 謙太郎:
+  location: 東京
+  division: セールス
+  role: セールス
+大澤 裕文:
+  location: 東京
+  division: セールス
+  role: アシスタント
+宇治 秀太:
+  location: 東京
+  division: マーケティング
+  role: アシスタント
+早坂 弘道:
+  location: 東京
+  division:
+    - セールス
+    - マーケティング
+  role: マネージャー
+  isManager: true
+中嶋 悟志:
+  location: 東京
+  division: プロダクト開発
+  role: プロダクトマネージャー
+檜垣 竜平:
+  location: 東京
+  division: プロダクト開発
+  role: デザイナー
+深堀 義夫:
+  location: 東京
+  division: プロダクト開発
+  role: エンジニア
+財前 正司:
+  location: 東京
+  division: プロダクト開発
+  role: マネージャー
+  isManager: true
+戸井田 優二:
+  location: 東京
+  division: カスタマーサポート
+  role: カスタマーサポート
+飯倉 良孝:
+  location: 東京
+  division: カスタマーサポート
+  role: カスタマーサポート
+仲摩 芳一:
+  location: 東京
+  division: カスタマーサポート
+  role: マネージャー
+  isManager: true
+井川 浩三:
+  location: サンフランシスコ
+  division: プロダクト開発
+  role: デザイナー
+篠木 忠行:
+  location: サンフランシスコ
+  division: プロダクト開発
+  role: エンジニア
+西端 政道:
+  location: サンフランシスコ
+  division: カスタマーサポート
+  role: カスタマーサポート
+阿南 徳行:
+  location: サンフランシスコ
+  division: カスタマーサポート
+  role: カスタマーサポート
+鈴本 弘平:
+  location: アムステルダム
+  division: プロダクト開発
+  role: エンジニア
+森末 俊憲:
+  location: アムステルダム
+  division: カスタマーサポート
+  role: カスタマーサポート
+竹越 幹:
+  location: アムステルダム
+  division: カスタマーサポート
+  role: カスタマーサポート

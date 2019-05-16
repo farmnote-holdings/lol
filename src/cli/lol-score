@@ -1,0 +1,14 @@
+#!/usr/bin/env node
+
+const program = require('commander')
+const fs = require('fs')
+const summarizeScore = require('../../dist/summarize-score').default
+
+program
+  .arguments('<json>')
+  .action((json) => {
+    const contents = fs.readFileSync(json, 'utf-8')
+    const allPairs = JSON.parse(contents)
+    console.log(summarizeScore(allPairs))
+  })
+  .parse(process.argv)

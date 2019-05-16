@@ -1,0 +1,9 @@
+#!/usr/bin/env node
+
+const program = require('commander')
+
+program
+  .command('generate', 'generate 1on1 pairs')
+  .command('score', 'calculate a score of 1on1 pairs')
+  .command('csv', 'print csv')
+  .parse(process.argv)

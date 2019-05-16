@@ -1,0 +1,24 @@
+#!/usr/bin/env node
+
+const program = require('commander')
+const fs = require('fs')
+
+program
+  .arguments('<json>')
+  .action((json) => {
+    const contents = fs.readFileSync(json, 'utf-8')
+    const allPairs = JSON.parse(contents)
+
+    let turn = 1
+    allPairs.forEach(pairs => {
+      const headers = [`turn ${turn}`, '', 'done?']
+
+      process.stdout.write(headers.join(',') + "\n")
+
+      pairs.forEach(({ aName, bName }) => {
+        process.stdout.write([aName, bName].join(',') + ',\n')
+      })
+      ++turn
+    })
+  })
+  .parse(process.argv)
